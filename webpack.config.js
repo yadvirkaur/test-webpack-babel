@@ -37,19 +37,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-                [
-                "@babel/preset-env",
-                {
-                  "targets": {
-                    "browsers": [
-                      "IE >= 11"
-                    ]
-                  }
-                }
-              ],
-              "@babel/preset-react"
-            ],
+            presets: ["@babel/preset-env","@babel/preset-react"],
           },
         },
       },
