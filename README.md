@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+To set up a project with webpack, Babel, and core-js, follow these steps:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Install webpack and webpack-cli as development dependencies:
 
-## Available Scripts
+```shell
+npm install -D webpack webpack-cli
+```
 
-In the project directory, you can run:
+2. Add the following script in your `package.json` file:
 
-### `npm start`
+```json
+"build": "webpack"
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Install style-loader and css-loader as development dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```shell
+npm install -D style-loader css-loader
+```
 
-### `npm test`
+4. Install html-webpack-plugin as a development dependency:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```shell
+npm install -D html-webpack-plugin
+```
 
-### `npm run build`
+5. Add the following script in your `package.json` file:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```json
+"dev": "webpack serve"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then run the command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+npm run dev
+```
 
-### `npm run eject`
+6. Install babel-loader, @babel/core, and @babel/preset-env as development dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```shell
+npm install -D babel-loader @babel/core @babel/preset-env
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. For React projects, add the following presets in your webpack configuration:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```js
+presets: ['@babel/preset-env', '@babel/preset-react'];
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+8. Import `import 'core-js/stable';` at the top of your `index.js` file.
 
-## Learn More
+9. Install the latest version of core-js and save it as a dependency:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell
+npm install core-js@latest --save
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By following these steps, you should have a setup with webpack, Babel, and core-js in your project.
